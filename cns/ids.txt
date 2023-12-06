@@ -1,0 +1,7 @@
+sudo apt-get update
+sudo apt-get install snort
+
+sudo oinkmaster -o /etc/snort/rules
+sudo service snort restart
+
+sudo snort -A console -q -u snort -g snort -c /etc/snort/snort.conf -i <your_network_interface>
